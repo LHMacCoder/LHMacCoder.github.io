@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LaunchNest，一款清晰、快速的原生 macOS 应用启动器。" />
+    <title>LaunchNest — Haomac Labs</title>
+    <link rel="icon" type="image/svg+xml" href="assets/haomac-labs-favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="product.js" defer></script>
+  </head>
+  <body class="product-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="返回 Haomac Labs 首页">
+        <img class="brand-mark" src="assets/haomac-labs-mark.svg" alt="" aria-hidden="true" />
+        <span>Haomac Labs</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-label="打开菜单">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="index.html#products">产品</a>
+        <a href="index.html#principles">理念</a>
+        <a href="index.html#about">关于</a>
+        <a class="nav-pill" href="mailto:support@haomaclabs.com">联系我们</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="product-hero">
+        <div class="product-hero-copy">
+          <a class="back-link" href="index.html#products">← 返回全部产品</a>
+          <img class="product-page-icon" src="assets/launchnest-icon.png" alt="LaunchNest 图标" />
+          <p class="eyebrow light">原生 macOS 应用启动器</p>
+          <h1>LaunchNest</h1>
+          <p class="product-lead">
+            把所有应用安放在一个清晰、熟悉的空间里。快速找到，立即启动，继续专注。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:support@haomaclabs.com?subject=LaunchNest">获取发布通知 <span>↗</span></a>
+            <a class="text-link light" href="#features">查看功能 <span>↓</span></a>
+          </div>
+        </div>
+        <div class="product-visual" aria-hidden="true">
+          <div class="showcase-glow"></div>
+          <div class="mac-window">
+            <div class="window-bar">
+              <div class="traffic"><i></i><i></i><i></i></div>
+              <div class="search">⌕&nbsp;&nbsp; Search apps</div><span></span>
+            </div>
+            <div class="apps-grid">
+              <div class="mini-app coral">Aa</div><div class="mini-app sky">⌁</div>
+              <div class="mini-app yellow">✦</div><div class="mini-app purple">◫</div>
+              <div class="mini-app green">✓</div><div class="mini-app blue">●</div>
+              <div class="mini-app pink">◆</div><div class="mini-app orange">⌘</div>
+              <div class="mini-app navy">⌁</div><div class="mini-app cream">▦</div>
+              <div class="mini-app violet">✣</div><div class="mini-app mint">◉</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section product-features" id="features">
+        <div class="section-heading">
+          <div><p class="eyebrow">核心功能</p><h2>启动应用，<br />不打断思路。</h2></div>
+          <p>LaunchNest 专注于一件事：让你更快地找到并打开 Mac 上的应用。</p>
+        </div>
+        <div class="principle-grid">
+          <article class="principle-card"><span class="principle-number">01</span><div class="principle-symbol symbol-focus"><i></i></div><h3>快速查找</h3><p>键入应用名称即可缩小范围，几秒内到达目标。</p></article>
+          <article class="principle-card"><span class="principle-number">02</span><div class="principle-symbol symbol-native"><i></i><i></i><i></i></div><h3>清晰网格</h3><p>用直观的图标网格浏览应用，熟悉且没有多余干扰。</p></article>
+          <article class="principle-card"><span class="principle-number">03</span><div class="principle-symbol symbol-care">✦</div><h3>原生体验</h3><p>为 macOS 打造，轻巧、快速，并自然融入系统。</p></article>
+        </div>
+      </section>
+
+      <section class="feature-gallery" id="gallery">
+        <div class="gallery-heading">
+          <p class="eyebrow">功能一览</p>
+          <h2>不只是启动，<br />更懂得整理。</h2>
+          <p>从快速查找到分组整理，每个动作都直接、自然，并且随时可以撤回或重新安排。</p>
+        </div>
+
+        <article class="screenshot-feature screenshot-feature-wide">
+          <div class="screenshot-copy">
+            <span>01 · 快速查找</span>
+            <h3>搜索 App</h3>
+            <p>输入关键词，即时过滤应用。无需翻页，也不用离开当前工作流。</p>
+          </div>
+          <div class="screenshot-frame">
+            <img src="assets/launch-nest/search-app.jpg" width="2240" height="1260" alt="LaunchNest 根据 code 关键词搜索并显示 Codex 和 Xcode" loading="lazy" />
+          </div>
+        </article>
+
+        <div class="screenshot-pair">
+          <article class="screenshot-feature">
+            <div class="screenshot-copy">
+              <span>02 · 自由排列</span>
+              <h3>拖拽排序 App</h3>
+              <p>按照自己的使用习惯重新排列应用，让常用工具始终处于顺手的位置。</p>
+            </div>
+            <div class="screenshot-frame">
+              <img src="assets/launch-nest/reorder-apps.jpg" width="2240" height="1260" alt="在 LaunchNest 网格中拖拽应用调整排序" loading="lazy" />
+            </div>
+          </article>
+          <article class="screenshot-feature">
+            <div class="screenshot-copy">
+              <span>03 · 批量操作</span>
+              <h3>拖拽多选 App</h3>
+              <p>一次选中多个应用，减少重复操作，更快完成整理。</p>
+            </div>
+            <div class="screenshot-frame">
+              <img src="assets/launch-nest/multi-select-apps.jpg" width="2240" height="1260" alt="LaunchNest 中多个应用被同时选中" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+        <article class="screenshot-feature screenshot-feature-wide screenshot-feature-reverse">
+          <div class="screenshot-copy">
+            <span>04 · 智能分组</span>
+            <h3>拖拽合并 App 分组</h3>
+            <p>把相关应用拖到一起即可建立分组，让大型应用库依然保持清晰。</p>
+          </div>
+          <div class="screenshot-frame">
+            <img src="assets/launch-nest/merge-groups.jpg" width="2240" height="1260" alt="在 LaunchNest 中拖拽应用合并为新分组" loading="lazy" />
+          </div>
+        </article>
+
+        <div class="screenshot-pair">
+          <article class="screenshot-feature">
+            <div class="screenshot-copy">
+              <span>05 · 个性命名</span>
+              <h3>修改 App 分组命名</h3>
+              <p>为每个分组起一个容易识别的名称，建立属于自己的分类方式。</p>
+            </div>
+            <div class="screenshot-frame">
+              <img src="assets/launch-nest/rename-group.jpg" width="2240" height="1260" alt="LaunchNest 中正在为应用分组修改名称" loading="lazy" />
+            </div>
+          </article>
+          <article class="screenshot-feature">
+            <div class="screenshot-copy">
+              <span>06 · 详细了解</span>
+              <h3>预览 App 信息</h3>
+              <p>查看应用版本、大小和修改时间，也可以从信息面板直接打开。</p>
+            </div>
+            <div class="screenshot-frame">
+              <img src="assets/launch-nest/preview-app-info.jpg" width="2240" height="1260" alt="LaunchNest 中显示 Xcode 的应用详细信息" loading="lazy" />
+            </div>
+          </article>
+        </div>
+
+        <article class="screenshot-feature screenshot-feature-wide">
+          <div class="screenshot-copy">
+            <span>07 · 随叫随到</span>
+            <h3>设置打开快捷键</h3>
+            <p>定义顺手的全局快捷键，在任何场景快速唤起 LaunchNest。</p>
+          </div>
+          <div class="screenshot-frame">
+            <img src="assets/launch-nest/set-shortcut.jpg" width="2240" height="1228" alt="LaunchNest 偏好设置中配置打开窗口快捷键" loading="lazy" />
+          </div>
+        </article>
+      </section>
+
+      <section class="product-cta">
+        <p class="eyebrow light">即将发布</p>
+        <h2>准备好让应用<br />井然有序了吗？</h2>
+        <a class="button primary" href="mailto:support@haomaclabs.com?subject=LaunchNest">联系支持 <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="index.html"><img class="brand-mark" src="assets/haomac-labs-mark.svg" alt="" aria-hidden="true" /><span>Haomac Labs</span></a>
+      <p>Thoughtful software for your Mac.</p>
+      <div class="footer-links"><a href="index.html#products">产品</a><a href="mailto:support@haomaclabs.com">联系</a><a href="privacy.html">隐私</a></div>
+      <span class="copyright">© <span id="year"></span> Haomac Labs</span>
+    </footer>
+  </body>
+</html>

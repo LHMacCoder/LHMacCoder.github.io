@@ -1,29 +1,176 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XCFittenCode Support</title>
-    <style>
-        body {
-            font-family: "Courier New", monospace;
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #fdf6e3;
-            color: #333;
-        }
-        h1 {
-            font-size: 24px;
-        }
-        p {
-            margin: 10px 0;
-        }
-    </style>
-</head>
-<body>
-    <h1>XCFittenCode Support</h1>
-    <p><strong>email:</strong> lin450922@gmail.com</p>
-</body>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Haomac Labs creates focused, thoughtfully designed software for Mac."
+    />
+    <title>Haomac Labs — Thoughtful software for your Mac</title>
+    <link rel="icon" type="image/svg+xml" href="assets/haomac-labs-favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Haomac Labs 首页">
+        <img class="brand-mark" src="assets/haomac-labs-mark.svg" alt="" aria-hidden="true" />
+        <span>Haomac Labs</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-label="打开菜单">
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#products">产品</a>
+        <a href="#principles">理念</a>
+        <a href="#about">关于</a>
+        <a class="nav-pill" href="mailto:support@haomaclabs.com">联系我们</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow light">独立软件工作室 · 为 Mac 而生</p>
+          <h1>让日常工具<br />变得更好用。</h1>
+          <p class="hero-intro">
+            我们打造专注、可靠、精心设计的 Mac 应用，
+            让复杂的事情变简单，让你的工作流更流畅。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#products">探索我们的产品 <span>↘</span></a>
+            <a class="text-link light" href="#about">认识 Haomac Labs <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="sun"></div>
+          <div class="tile tile-one"><span></span><span></span><span></span><span></span></div>
+          <div class="tile tile-two"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="spark spark-one">✦</div>
+          <div class="spark spark-two">✦</div>
+        </div>
+
+        <div class="hero-foot">
+          <span>Designed with care in China</span>
+          <span class="scroll-hint">向下探索 <i></i></span>
+        </div>
+      </section>
+
+      <section class="section products-section" id="products">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">我们的产品</p>
+            <h2>一个不断成长的<br />好工具集合。</h2>
+          </div>
+          <p>
+            每款产品都源于真实需求。我们删去不必要的复杂，
+            把时间用在体验、性能与长期维护上。
+          </p>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section class="section principles-section" id="principles">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">我们的坚持</p>
+            <h2>小团队，<br />高标准。</h2>
+          </div>
+          <p>
+            独立让我们能够保持专注：不追逐臃肿功能，只构建值得长期使用的软件。
+          </p>
+        </div>
+
+        <div class="principle-grid">
+          <article class="principle-card reveal">
+            <span class="principle-number">01</span>
+            <div class="principle-symbol symbol-focus"><i></i></div>
+            <h3>专注，胜过堆砌</h3>
+            <p>每个功能都必须解决明确问题。做得少一点，但把每一点做好。</p>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-number">02</span>
+            <div class="principle-symbol symbol-native"><i></i><i></i><i></i></div>
+            <h3>尊重平台</h3>
+            <p>遵循 macOS 的习惯与性能标准，让应用自然融入你的电脑。</p>
+          </article>
+          <article class="principle-card reveal">
+            <span class="principle-number">03</span>
+            <div class="principle-symbol symbol-care">✦</div>
+            <h3>长期用心维护</h3>
+            <p>软件不是一次性交付。我们持续倾听、改进，并保持可靠。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-art reveal" aria-hidden="true">
+          <div class="about-disc"></div>
+          <div class="about-grid"></div>
+          <div class="about-star">✦</div>
+          <div class="about-card"><span>H</span><span>L</span></div>
+        </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow light">关于 Haomac Labs</p>
+          <h2>独立思考，<br />认真创造。</h2>
+          <p>
+            Haomac Labs 是一个独立开发者品牌，专注于创造简单、漂亮且真正实用的软件。
+            我们相信，优秀的数字工具应当减少干扰，帮助人们把注意力留给重要的事。
+          </p>
+          <a class="text-link light" href="mailto:support@haomaclabs.com">
+            support@haomaclabs.com <span>↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="newsletter-section">
+        <div>
+          <p class="eyebrow">保持联系</p>
+          <h2>新品发布时，<br />我们告诉你。</h2>
+        </div>
+        <form class="newsletter-form">
+          <label class="sr-only" for="email">邮箱地址</label>
+          <input id="email" type="email" placeholder="你的邮箱地址" required />
+          <button type="submit">订阅动态 <span>→</span></button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top">
+        <img class="brand-mark" src="assets/haomac-labs-mark.svg" alt="" aria-hidden="true" />
+        <span>Haomac Labs</span>
+      </a>
+      <p>Thoughtful software for your Mac.</p>
+      <div class="footer-links">
+        <a href="#products">产品</a>
+        <a href="mailto:support@haomaclabs.com">联系</a>
+        <a href="privacy.html">隐私</a>
+      </div>
+      <span class="copyright">© <span id="year"></span> Haomac Labs</span>
+    </footer>
+
+    <template id="product-card-template">
+      <article class="product-card reveal">
+        <div class="product-top">
+          <img class="product-icon" alt="" />
+          <span class="product-status"></span>
+        </div>
+        <div>
+          <p class="product-category"></p>
+          <h3 class="product-name"></h3>
+          <p class="product-description"></p>
+        </div>
+        <a class="product-link"><span class="product-link-text"></span><span>↗</span></a>
+      </article>
+    </template>
+  </body>
 </html>

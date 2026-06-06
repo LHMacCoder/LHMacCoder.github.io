@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="haomac-gradient" x1="8" y1="7" x2="40" y2="41" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFAC91"/>
+      <stop offset="1" stop-color="#FF5B35"/>
+    </linearGradient>
+  </defs>
+  <path d="M11 15.5V32.5" stroke="url(#haomac-gradient)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M31.5 15.5V32.5" stroke="url(#haomac-gradient)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M11 24H31.5" stroke="url(#haomac-gradient)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M7.5 36.5C16.5 43 34.5 42 40.5 29" stroke="#FFF7F2" stroke-width="2" stroke-linecap="round" opacity=".92"/>
+  <circle cx="40.5" cy="29" r="3.5" fill="#C7F25B"/>
+</svg>
