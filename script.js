@@ -1,57 +1,54 @@
-const products = [
-  {
-    name: "LaunchNest",
-    category: "Mac 应用启动器",
-    description: "用清晰、快速的网格整理和启动你的所有应用。",
-    status: "即将发布",
-    icon: "assets/launchnest-icon.png",
-    link: "launch-nest.html",
-    action: "了解产品",
-  },
-  {
-    name: "Next Utility",
-    category: "正在构建",
-    description: "又一款专注而贴心的 Mac 工具正在路上。",
-    status: "开发中",
-    action: "敬请期待",
-  },
-  {
-    name: "Your Better Workflow",
-    category: "未来产品",
-    description: "我们持续探索能够消除重复、带来专注的新想法。",
-    status: "探索中",
-    action: "保持关注",
-  },
-];
-
 const productGrid = document.querySelector("#product-grid");
 const productTemplate = document.querySelector("#product-card-template");
 
-products.forEach((product, index) => {
-  const fragment = productTemplate.content.cloneNode(true);
-  const card = fragment.querySelector(".product-card");
-  const icon = fragment.querySelector(".product-icon");
-  const link = fragment.querySelector(".product-link");
+function getProducts() {
+  const translation = window.HaomacI18n?.getTranslation();
+  const translatedProducts = translation?.products || [];
+  return translatedProducts.map(([name, category, description, status, action], index) => ({
+    name,
+    category,
+    description,
+    status,
+    action,
+    icon: index === 0 ? "assets/launchnest-icon.png" : "",
+    link: index === 0 ? "launch-nest.html" : "#about",
+  }));
+}
 
-  if (product.icon) {
-    icon.src = product.icon;
-    icon.alt = `${product.name} 图标`;
-  } else {
-    const placeholder = document.createElement("div");
-    placeholder.className = "placeholder-icon";
-    placeholder.textContent = index === 1 ? "+" : "✦";
-    icon.replaceWith(placeholder);
-    card.classList.add("coming-soon");
-  }
+function renderProducts() {
+  productGrid.replaceChildren();
 
-  fragment.querySelector(".product-status").textContent = product.status;
-  fragment.querySelector(".product-category").textContent = product.category;
-  fragment.querySelector(".product-name").textContent = product.name;
-  fragment.querySelector(".product-description").textContent = product.description;
-  fragment.querySelector(".product-link-text").textContent = product.action;
-  link.href = product.link || "#about";
-  productGrid.append(fragment);
-});
+  getProducts().forEach((product, index) => {
+    const fragment = productTemplate.content.cloneNode(true);
+    const card = fragment.querySelector(".product-card");
+    const icon = fragment.querySelector(".product-icon");
+    const link = fragment.querySelector(".product-link");
+
+    card.classList.add("visible");
+
+    if (product.icon) {
+      icon.src = product.icon;
+      icon.alt = product.name;
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "placeholder-icon";
+      placeholder.textContent = index === 1 ? "+" : "✦";
+      icon.replaceWith(placeholder);
+      card.classList.add("coming-soon");
+    }
+
+    fragment.querySelector(".product-status").textContent = product.status;
+    fragment.querySelector(".product-category").textContent = product.category;
+    fragment.querySelector(".product-name").textContent = product.name;
+    fragment.querySelector(".product-description").textContent = product.description;
+    fragment.querySelector(".product-link-text").textContent = product.action;
+    link.href = product.link;
+    productGrid.append(fragment);
+  });
+}
+
+renderProducts();
+window.addEventListener("haomac:languagechange", renderProducts);
 
 const menuButton = document.querySelector(".menu-button");
 const siteNav = document.querySelector(".site-nav");
@@ -89,7 +86,9 @@ if (newsletterForm) {
   newsletterForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    form.querySelector(".form-status").textContent = "感谢关注。订阅服务接入后，我们会第一时间通知你。";
+    const translation = window.HaomacI18n?.getTranslation();
+    form.querySelector(".form-status").textContent =
+      translation?.home.formStatus || "感谢关注。订阅服务接入后，我们会第一时间通知你。";
     form.reset();
   });
 }
